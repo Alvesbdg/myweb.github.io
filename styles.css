@@ -48,12 +48,20 @@ header {
     height: 24px;
 }
 
+ 
 .hero {
-    background-color: #deebf3;
-    padding: 100px 0 60px;
+    background-image: url('background.png'); /* Ganti dengan path gambar yang benar */
+    background-size: cover; /* Agar gambar memenuhi seluruh section */
+    background-position: center; /* Agar gambar tetap berada di tengah */
+    height: 50vh; /* Agar section memenuhi tinggi layar */
+    display: flex;
+    justify-content: center; /* Mengatur konten di tengah secara horizontal */
+    align-items: center; /* Mengatur konten di tengah secara vertikal */
+    color: white; /* Mengubah teks menjadi putih agar lebih kontras dengan background */
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
+
 
 .hero .hero-content {
     max-width: 1440px;
@@ -67,14 +75,16 @@ header {
 }
 
 .hero nav ul {
-    list-style: none;
+    list-style: none; /* Menghapus bullet points */
     padding: 0;
-    margin: 20px 0 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Jarak antar item navigasi */
 }
 
 .hero nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 15px; 
 }
 
 .hero nav ul li a {
@@ -83,6 +93,15 @@ header {
     font-weight: bold;
     position: relative;
     overflow: hidden;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: white; /* Teks putih untuk link */
+    padding: 10px 15px; /* Memberikan sedikit padding agar ruang lebih luas */
+    transition: background-color 0.3s ease; /* Animasi smooth saat hover */
+}
+
+.hero nav ul li a:hover {
+    background-color: rgba(38, 16, 241, 0.2); /* Background semi-transparan */
+    border-radius: 5px; /* Membuat sudut link sedikit melengkung */
 }
 
 .hero nav ul li a::after {
